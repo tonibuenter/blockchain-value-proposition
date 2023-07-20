@@ -1,0 +1,53 @@
+% Inbuilt themes in beamer
+%\documentclass[aspectratio=1610]{beamer}
+\documentclass{beamer}
+\usepackage{subfiles}
+
+% Theme choice:
+\usetheme{Singapore}
+\usepackage[german]{babel}  % Set the language to German
+% Title page details:
+\title{Blockchain: Zwischen Hype und Nutzen}
+\author{Dr. Toni A. Bünter}
+\date{\today}
+
+
+\definecolor{mycolor}{rgb}{0.13, 0.1, 0.45}
+\setbeamercolor{structure}{fg=mycolor}
+
+\setbeamertemplate{footline}{
+    \hspace*{0.05\paperwidth}
+    \raisebox{1.2ex}[0pt][0pt]{\includegraphics[height=4mm]{./figures/ooit146}}
+    \hspace*{0.05\paperwidth}
+    \raisebox{1.2ex}[0pt][0pt]{Seite \insertframenumber}
+    \hspace*{0.01\paperwidth}
+    \raisebox{1.2ex}[0pt][0pt]{\today}
+    \hspace*{0.005\paperwidth}
+    \raisebox{1.2ex}[0pt][0pt]{Dr. Toni Bünter}
+    \hspace*{0.01\paperwidth}
+    \vspace*{0.1cm}
+}
+\begin{document}
+
+
+% Title page frame
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+% Remove logo from the next slides
+    \logo{}
+
+
+% Outline frame
+    \begin{frame}{Outline}
+        \tableofcontents
+    \end{frame}
+
+
+
+
+    \subfile{p01-blockchain-de.tex}
+    \subfile{p05-anwendungen-de.tex}
+
+\end{document}
